@@ -7,8 +7,8 @@ import { Sparkles, Users, TrendingUp, Star } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative h-[1280px] w-full overflow-hidden flex justify-center">
-            <section className="absolute inset-0 z-0 ">
+        <section className="relative w-full flex justify-center">
+            <section className="absolute inset-0 z-0 overflow-hidden h-[1200px]">
                 <span className="block absolute bg-gradient-to-r from-purple-400/30 to-pink-400/30 blur-3xl h-35 w-35 rounded-full top-16 -left-0 -translate-x-1/2 animate-pulse"></span>
                 <span className="block absolute bg-gradient-to-r from-indigo-400/20 to-purple-400/20 blur-3xl h-35 w-35 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse"></span>
                 <span className="block absolute bg-gradient-to-r from-blue-400/30 to-cyan-400/30 blur-3xl h-35 w-35 rounded-full bottom-0 right-0 translate-x-1/2 animate-pulse"></span>
@@ -21,14 +21,22 @@ export default function Hero() {
                     <span className="block">Perfect for job seekers improving their resumes and businesses streamlining hiring.</span>
                 </p>
 
-                <PrimaryButton className="h-14 w-full mt-5 text-[18px] rounded-xl">Get Started</PrimaryButton>
-                <button className="h-14 w-full mt-5 text-[18px] font-medium rounded-xl border-2 border-gray-600/10 dark:active:border-blue-400/10 active:border-0 active:bg-gray-600/10 active:text-gray-600 dark:active:bg-blue-400/10 dark:active:text-gray-300 active:scale-95 transition-all duration-200 ease-in-out">Screen Applicants</button>
+                <PrimaryButton className="h-14 w-full mt-5 text-[18px] rounded-xl">
+                    For Applicants
+                </PrimaryButton>
+                <button className="h-14 w-full mt-5 text-[18px] font-medium rounded-xl border-2 border-gray-600/10 dark:active:border-blue-400/10 active:border-0 active:bg-gray-600/10 active:text-gray-600 dark:active:bg-blue-400/10 dark:active:text-gray-300 active:scale-95 transition-all duration-200 ease-in-out">
+                    For Recruiters
+                </button>
                 
                 <Image
                     src="/ResumeResult.png"
                     alt="Hero Image"
                     height={800}
-                    width={600} 
+                    width={600}
+                    priority
+                    placeholder="blur"
+                    blurDataURL="/ResumeResult.png"
+                    quality={90}
                 />
 
                 <Badge 
